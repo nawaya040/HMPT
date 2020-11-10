@@ -8,6 +8,7 @@ smc.apt = function(data, #Data matrix
                    lognu.lb = -1, lognu.ub = 4, n.grid.nu = 5, beta = 0.1, #Hyperparameters for APT (See Ma(2017))
                    n.states = 5 #Number of states
 ){
+  
   if(ncol(data) == ncol(grid.points)){
     d = ncol(data)
     n = nrow(data)
