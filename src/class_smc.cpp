@@ -1087,8 +1087,8 @@ void class_smc::compute_eff_MRS(const int index_best_tree){
       eff_MAP(j) = gamma_post_MAP(0,j) * abs(
                                             mean(
                                               log(
-                                                theta_post_sample.col(0) / (1-theta_post_sample.col(0))
-                                                / ( theta_post_sample.col(1) / (1-theta_post_sample.col(1)) ) )
+                                                theta_post_sample.col(0) / (1-theta_post_sample.col(0) + SMALL_VALUE)
+                                                / ( theta_post_sample.col(1) / (1-theta_post_sample.col(1) + SMALL_VALUE) ) )
                                               )
                                             );
     }
