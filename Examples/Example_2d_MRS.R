@@ -6,12 +6,10 @@ groups = rep(c(1,2), each=n/2)
 
 w = c(1/3, 1/3, 1/3)
 cum_w = cumsum(w)
-
 means1 = c(-2.5,1,2)
 means2 = c(1,-2,2.5)
 
 for(i in 1:n){
-
   group.i = groups[i]
   u = runif(1)
 
@@ -41,7 +39,6 @@ data1 = data[groups==1,]
 data2 = data[groups==2,]
 
 node.ID = which.min(out$post.null.nodewise)
-#node.ID = which.max(out$eff.nodewise)
 
 left  = out$MAPtree.l[,node.ID]
 right = out$MAPtree.r[,node.ID]
