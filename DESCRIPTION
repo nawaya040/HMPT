@@ -1,11 +1,11 @@
 Package: SMCMP
 Type: Package
-Title: What the package does (short line)
+Title:Hidden Markov Polya trees for high-dimensional distributions
 Version: 1.0
 Date: 2020-11-09
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Naoki Awaya
+Maintainer: Naoki Awaya <naoki.awaya@dke.edu>
+Description: This package implements the SMCMP (Sequential Monte Carlo - Message passing) algorithm of Awaya and Ma (2020).
+License: GPL (>= 2)
 Imports: Rcpp (>= 1.0.5)
 LinkingTo: Rcpp, RcppArmadillo
