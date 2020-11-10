@@ -11,9 +11,7 @@ using namespace arma;
 using namespace std;
 
 #define MEMORY_LIMIT 10 //Initial number of nodes whose information is contained in each particle
-
 #define EFF_SAMPLE 1000 //Sample size of Monte Carlo to approximate eff(A) in the estimation with MRS
-
 #define SMALL_VALUE 1e-300
 #define LARGE_VALUE 1e+300
 
