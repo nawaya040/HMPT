@@ -1,6 +1,6 @@
 # SMCMP
 
-This package implements the SMCMP (Sequential Monte Carlo - Message passing) algorithm of Awaya and Ma (2020
+This package implements the SMCMP (Sequential Monte Carlo - Message passing) algorithm of Awaya and Ma (2020).
 
 The package may be easily installed using `devtools` as follows:
 
