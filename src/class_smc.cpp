@@ -1016,7 +1016,7 @@ void class_smc::compute_post_null_MRS(const int index_p){
       //Leaf node
       psi_tilde(j) = xi_post(1,1,j) + xi_post(1,2,j);
     }else{
-      //Non-lead node
+      //Non-leaf node
       int child_ID_l = children_IDs_i(0,j);
       int child_ID_r = children_IDs_i(1,j);
 
