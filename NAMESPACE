@@ -1,3 +1,4 @@
 useDynLib(SMCMP,.registration=TRUE)
 importFrom(Rcpp,evalCpp)
-export(smc.apt,smc.mrs)
+export(smc.apt, smc.mrs, boosting, simulation)
+
