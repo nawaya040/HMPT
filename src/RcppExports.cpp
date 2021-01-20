@@ -7,40 +7,6 @@
 using namespace Rcpp;
 using namespace arma;
 
-// residualize
-List residualize(mat X, mat grid_points, mat tree_l0, mat tree_r0, ivec levels, mat post_states0, ivec Is_non_terminal, imat children_IDs, double c_learn);
-RcppExport SEXP _SMCMP_residualize(SEXP XSEXP, SEXP grid_pointsSEXP, SEXP tree_l0SEXP, SEXP tree_r0SEXP, SEXP levelsSEXP, SEXP post_states0SEXP, SEXP Is_non_terminalSEXP, SEXP children_IDsSEXP, SEXP c_learnSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< mat >::type X(XSEXP);
-    Rcpp::traits::input_parameter< mat >::type grid_points(grid_pointsSEXP);
-    Rcpp::traits::input_parameter< mat >::type tree_l0(tree_l0SEXP);
-    Rcpp::traits::input_parameter< mat >::type tree_r0(tree_r0SEXP);
-    Rcpp::traits::input_parameter< ivec >::type levels(levelsSEXP);
-    Rcpp::traits::input_parameter< mat >::type post_states0(post_states0SEXP);
-    Rcpp::traits::input_parameter< ivec >::type Is_non_terminal(Is_non_terminalSEXP);
-    Rcpp::traits::input_parameter< imat >::type children_IDs(children_IDsSEXP);
-    Rcpp::traits::input_parameter< double >::type c_learn(c_learnSEXP);
-    rcpp_result_gen = Rcpp::wrap(residualize(X, grid_points, tree_l0, tree_r0, levels, post_states0, Is_non_terminal, children_IDs, c_learn));
-    return rcpp_result_gen;
-END_RCPP
-}
-// G_inverse
-mat G_inverse(mat Y, mat tree_l, mat tree_r, vec theta_post, mat children_IDs);
-RcppExport SEXP _SMCMP_G_inverse(SEXP YSEXP, SEXP tree_lSEXP, SEXP tree_rSEXP, SEXP theta_postSEXP, SEXP children_IDsSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< mat >::type Y(YSEXP);
-    Rcpp::traits::input_parameter< mat >::type tree_l(tree_lSEXP);
-    Rcpp::traits::input_parameter< mat >::type tree_r(tree_rSEXP);
-    Rcpp::traits::input_parameter< vec >::type theta_post(theta_postSEXP);
-    Rcpp::traits::input_parameter< mat >::type children_IDs(children_IDsSEXP);
-    rcpp_result_gen = Rcpp::wrap(G_inverse(Y, tree_l, tree_r, theta_post, children_IDs));
-    return rcpp_result_gen;
-END_RCPP
-}
 // SMCforPT
 List SMCforPT(const mat X, const int G, const ivec groups_input, const mat grid_points, const ivec groups_pred_input, const double eta_R, const int I, const List model_parameters_list, const int M, const int max_K, const int NL, const double mixing_resample, const double thresh_resample, const int minimum_size, const int do_density_est, const int method);
 RcppExport SEXP _SMCMP_SMCforPT(SEXP XSEXP, SEXP GSEXP, SEXP groups_inputSEXP, SEXP grid_pointsSEXP, SEXP groups_pred_inputSEXP, SEXP eta_RSEXP, SEXP ISEXP, SEXP model_parameters_listSEXP, SEXP MSEXP, SEXP max_KSEXP, SEXP NLSEXP, SEXP mixing_resampleSEXP, SEXP thresh_resampleSEXP, SEXP minimum_sizeSEXP, SEXP do_density_estSEXP, SEXP methodSEXP) {
@@ -69,8 +35,6 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_SMCMP_residualize", (DL_FUNC) &_SMCMP_residualize, 9},
-    {"_SMCMP_G_inverse", (DL_FUNC) &_SMCMP_G_inverse, 5},
     {"_SMCMP_SMCforPT", (DL_FUNC) &_SMCMP_SMCforPT, 16},
     {NULL, NULL, 0}
 };
