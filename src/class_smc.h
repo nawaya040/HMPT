@@ -16,7 +16,7 @@ public:
   ivec groups_input; //groups labels
   mat grid_points; //Matrix of grid points for density estimation with d columns 
   ivec groups_pred_input; //groups labels for grid points
-  double eta_R; //Now F(A) is shifted from 0 to 1 with prob 1- eta
+  double eta_R; //Hyper parameter of L's prior
   int I; //number of states
   List model_parameters_list; //tuning parameters specific to the model
   int M; // the number of particles
