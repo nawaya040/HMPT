@@ -9,6 +9,6 @@ library(devtools)
 install_github("nawaya040/SMCMP")
 ```
 
-The program code for the numerical experiments in Awaya and Ma (2020) is stored in an independent repository
+The program code for the numerical experiments in Awaya and Ma (2020) is available in an independent repository
 
 https://github.com/nawaya040/HMPT_experiments.git
